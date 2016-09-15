@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QUESTION 9</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Text One"="">
+    <input type="text" placeholder="Text Two"="">
+    <input type="text" placeholder="Text Three"="">
+    <br>
+    <br>
+    <button id="btn1">FIRST</button>
+    <button id="btn2">SECOND</button>
+    <br>
+    <div id="div" style="height:200px; width:200px; border: 1px solid blue">
+        <p id="span1" style="height:50px; width:195px;">
+        </p>
+        <p id="span2" style="height:50px; width:195px;">
+        </p>
+        <p id="span3" style="height:50px; width:195px;">
+        </p>
+        </p>
+        <script type="text/javascript">
+        var _id = function _id(id) {
+            return document['getElementById'](id);
+        }
+        var span1 = _id('span1');
+        var span2 = _id('span2');
+        var span3 = _id('span3');
+        var firstBtn = _id('btn1');
+        var secondBtn = _id('btn2');
+        var inputBox = document.querySelectorAll('input');
+        var divText = _id('div');
+
+
+        firstBtn['addEventListener']('click', function() {
+            if (inputBox[0].value) {
+                span1.innerHTML = inputBox[0].value;
+                inputBox[0].value = "";
+            }
+            if (inputBox[1].value) {
+                span2.innerHTML = inputBox[1].value;
+                inputBox[1].value = "";
+            }
+            if (inputBox[2].value) {
+                span3.innerHTML = inputBox[2].value;
+                inputBox[2].value = "";
+            }
+        })
+        secondBtn['addEventListener']('click', function() {
+            if (span1.innerHTML) {
+                inputBox[0].value = span1.innerHTML;
+                span1.innerHTML = "";
+            }
+            if (span2.innerHTML) {
+                inputBox[1].value = span2.innerHTML;
+                span2.innerHTML = "";
+
+            }
+            if (span3.innerHTML) {
+                inputBox[2].value = span3.innerHTML;
+                span3.innerHTML = "";
+
+            }
+        })
+        </script>
+</body>
+
+</html>
